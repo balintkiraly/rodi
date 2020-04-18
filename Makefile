@@ -3,5 +3,5 @@ ifeq ($(PREFIX),)
 endif
 
 install: 
-	install -Dm755 rdc $(DESTDIR)$(PREFIX)/bin/rdc
+	install -Dm755 rodi $(DESTDIR)$(PREFIX)/bin/rodi
 
