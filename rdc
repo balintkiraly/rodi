@@ -1,0 +1,19 @@
+#!/bin/bash
+
+mirror() {
+  primary=$(echo -e "$screens" | rofi -dmenu -p "? > ")
+}
+
+extend() {
+  primary=$(echo -e "$screens" | rofi -dmenu -p "Select primary display")
+}
+
+screens=$(xrandr -q | grep " connected" | awk '{print $1}')
+mode=$(echo -e "mirror\nextend\narandr\n$screens" | rofi -dmenu -p "Choose mode")
+
+case "$mode" in
+  "arandr") arandr ; exit ;;
+  "mirror") mirror ;;
+  "extend") extend ;;
+esac
+
