@@ -1,4 +1,4 @@
-# rodi - rofi display chooser
+# WIP: rodi - rofi display chooser
 
 ## Dependencies
  - Rofi
